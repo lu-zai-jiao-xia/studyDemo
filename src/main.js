@@ -17,5 +17,5 @@ function add(a,b) {
     }
     // return a + b;
 }
-console.log(add(a = 1), "结果nan");
+console.log(add(a = 1), "结果0");
 console.log("成功了");
