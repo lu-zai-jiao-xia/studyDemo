@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五角星</title>
+    <style>
+        canvas {
+            border: 1px solid hotpink;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800px" height="400px"></canvas>
+    <script>
+        // 画布
+        var myCanvas = document.querySelector("canvas");
+        // 2d绘图
+        var ctx = myCanvas.getContext("2d");
+        // 五角星
+        ctx.fillStyle = "#E6BF00";
+        ctx.beginPath();
+        ctx.moveTo(200, 78);
+        ctx.lineTo(128, 272);
+        ctx.lineTo(302, 149);
+        ctx.lineTo(98, 149);
+        ctx.lineTo(261, 272);
+        ctx.closePath();
+        ctx.fill();
+        // 正上
+        ctx.fillStyle = "#DCAE24"
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(200, 80);
+        ctx.lineTo(185, 162);
+        ctx.closePath();
+        ctx.fill();
+        ctx.fillStyle = "#FEFF75"
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(200, 80);
+        ctx.lineTo(213, 163);
+        ctx.closePath();
+        ctx.fill();
+        // 右上
+        ctx.fillStyle = "#FEFF75"
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(300, 150);
+        ctx.lineTo(213, 163);
+        ctx.closePath();
+        ctx.fill();
+        ctx.fillStyle = "#DAAA1E"
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(300, 150);
+        ctx.lineTo(221, 188);
+        ctx.closePath();
+        ctx.fill();
+        // 右下
+        ctx.fillStyle = "#FCEF50"
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(260, 270);
+        ctx.lineTo(221, 188);
+        ctx.closePath();
+        ctx.fill();
+        ctx.fillStyle = "#D29B10"
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(260, 270);
+        ctx.lineTo(198, 203);
+        ctx.closePath();
+        ctx.fill();
+        // 左下
+        ctx.fillStyle = "#DCB327"
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(130, 270);
+        ctx.lineTo(198, 203);
+        ctx.closePath();
+        ctx.fill();
+        ctx.fillStyle = "#E9CE43"
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(130, 270);
+        ctx.lineTo(176, 188);
+        ctx.closePath();
+        ctx.fill();
+        // 左上
+        ctx.fillStyle = "#DAAF24"
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(100, 150);
+        ctx.lineTo(176, 188);
+        ctx.closePath();
+        ctx.fill();
+        ctx.fillStyle = "#FEFF75"
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(100, 150);
+        ctx.lineTo(185, 162);
+        ctx.closePath();
+        ctx.fill();
+        // 分割线
+        // 右上
+        ctx.strokeStyle = "#E7C51B";
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(223, 150);
+        ctx.stroke();
+        // 右下
+        ctx.strokeStyle = "#E0BA2E";
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(236, 195);
+        ctx.stroke();
+        // 正下
+        ctx.strokeStyle = "#D7A61B";
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(197, 223);
+        ctx.stroke();
+        // 左下
+        ctx.strokeStyle = "#DDB529";
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(158, 194);
+        ctx.stroke();
+        // 右上
+        ctx.strokeStyle = "#E5C12D";
+        ctx.beginPath();
+        ctx.moveTo(200, 180);
+        ctx.lineTo(175, 150);
+        ctx.stroke();
+        // 美国队长盾牌
+        ctx.fillStyle = "#530000"
+        ctx.beginPath();
+        ctx.arc(500, 184, 160, 0, 2 * Math.PI, false);
+        ctx.fill();
+        ctx.fillStyle = "#ffffff";
+        ctx.beginPath();
+        ctx.arc(500, 184, 140, 0, 2 * Math.PI, false);
+        ctx.fill();
+        ctx.fillStyle = "#530000"
+        ctx.beginPath();
+        ctx.arc(500, 184, 120, 0, 2 * Math.PI, false);
+        ctx.fill();
+        ctx.fillStyle = "#2D6EA4"
+        ctx.beginPath();
+        ctx.arc(500, 184, 105, 0, 2 * Math.PI, false);
+        ctx.fill();
+        ctx.fillStyle = "#ffffff";
+        ctx.beginPath();
+        ctx.moveTo(500, 80);
+        ctx.lineTo(430, 263);
+        ctx.lineTo(600, 150);
+        ctx.lineTo(400, 150);
+        ctx.lineTo(560, 270);
+        ctx.closePath();
+        ctx.fill();
+    </script>
+</body>
+</html>
