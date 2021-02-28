@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太极八卦</title>
+    <style>
+        canvas {
+            border: 1px solid hotpink;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800px" height="800px"></canvas>
+    <script>
+        var myCanvas = document.querySelector("canvas");
+        var ctx = myCanvas.getContext("2d");
+        // 右边黑半圆
+        ctx.fillStyle = "#000";
+        ctx.beginPath();
+        ctx.arc(400, 400, 200, (Math.PI / 180) * 270, (Math.PI / 180) * 90, false);
+        ctx.fill();
+        // 右边白半圆
+        ctx.strokeStyle = "#000";
+        ctx.beginPath();
+        ctx.arc(400, 400, 199, (Math.PI / 180) * 270, (Math.PI / 180) * 90, true);
+        ctx.stroke();
+        // 上面黑圆
+        ctx.fillStyle = "#000";
+        ctx.beginPath();
+        ctx.arc(400, 300, 100, 0, 2 * Math.PI, false);
+        ctx.fill();
+        // 下面白圆
+        ctx.fillStyle = "#fff";
+        ctx.beginPath();
+        ctx.arc(400, 499, 99, 0, 2 * Math.PI, false);
+        ctx.fill();
+        // 上面白太极眼
+        ctx.fillStyle = "#fff";
+        ctx.beginPath();
+        ctx.arc(400, 300, 30, 0, 2 * Math.PI, false);
+        ctx.fill();
+        // 下面白太极眼
+        ctx.fillStyle = "#000";
+        ctx.beginPath();
+        ctx.arc(400, 499, 30, 0, 2 * Math.PI, false);
+        ctx.fill();
+        // 八卦线
+        ctx.strokeStyle = "#000";
+        ctx.lineWidth = 10;
+        // 乾
+        ctx.beginPath();
+        ctx.moveTo(350, 50);
+        ctx.lineTo(450, 50);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(350, 80);
+        ctx.lineTo(450, 80);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(350, 110);
+        ctx.lineTo(450, 110);
+        ctx.stroke();
+        // 坎
+        ctx.beginPath();
+        ctx.moveTo(750, 350);
+        ctx.lineTo(750, 390);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(750, 410);
+        ctx.lineTo(750, 450);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(720, 350);
+        ctx.lineTo(720, 450);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(690, 350);
+        ctx.lineTo(690, 390);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(690, 410);
+        ctx.lineTo(690, 450);
+        ctx.stroke();
+        // 坤
+        ctx.beginPath();
+        ctx.moveTo(350, 750);
+        ctx.lineTo(390, 750);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(410, 750);
+        ctx.lineTo(450, 750);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(350, 720);
+        ctx.lineTo(390, 720);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(410, 720);
+        ctx.lineTo(450, 720);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(350, 690);
+        ctx.lineTo(390, 690);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(410, 690);
+        ctx.lineTo(450, 690);
+        ctx.stroke();
+        // 离
+        ctx.beginPath();
+        ctx.moveTo(50, 350);
+        ctx.lineTo(50, 450);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(80, 350);
+        ctx.lineTo(80, 390);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(80, 410);
+        ctx.lineTo(80, 450);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(110, 350);
+        ctx.lineTo(110, 450);
+        ctx.stroke();
+        // 兑
+        ctx.beginPath();
+        ctx.moveTo(118, 188);
+        ctx.lineTo(145, 160);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(160, 145);
+        ctx.lineTo(188, 118);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(139, 209);
+        ctx.lineTo(209, 139);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(160, 230);
+        ctx.lineTo(230, 160);
+        ctx.stroke();
+        // 巽
+        ctx.beginPath();
+        ctx.moveTo(621, 119);
+        ctx.lineTo(687, 190);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(600, 140);
+        ctx.lineTo(666, 211);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(579, 161);
+        ctx.lineTo(605, 189);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(618, 203);
+        ctx.lineTo(645, 232);
+        ctx.stroke();
+        // 艮
+        ctx.beginPath();
+        ctx.moveTo(645, 570);
+        ctx.lineTo(615, 602);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(602, 615);
+        ctx.lineTo(570, 645);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(666, 591);
+        ctx.lineTo(635, 622);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(622, 635);
+        ctx.lineTo(591, 666);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(687, 612);
+        ctx.lineTo(612, 687);
+        ctx.stroke();
+        // 震
+        ctx.beginPath();
+        ctx.moveTo(230, 630);
+        ctx.lineTo(160, 555);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(209, 651);
+        ctx.lineTo(181, 621);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(166, 605);
+        ctx.lineTo(139, 576);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(188, 672);
+        ctx.lineTo(160, 642);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(144, 625);
+        ctx.lineTo(118, 597);
+        ctx.stroke();
+    </script>
+</body>
+</html>
