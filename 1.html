@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>不太一样的太极图</title>
+  <style>
+    body {
+      background-color: rgba(239, 101, 225, 0.3)
+    }
+  </style>
+</head>
+<body>
+<canvas height="800" id="cvs" width="800"></canvas>
+</body>
+<script>
+  window.onload = function () {
+    let cvs = document.querySelector("#cvs")
+    let cs = cvs.getContext("2d")
+    cs.strokeStyle = "rgba(255,255,255,0.8)"
+    cs.fillStyle = "#000"
+    cs.lineWidth = 3
+    cs.globalAlpha = 0.9
+    cs.beginPath()
+    cs.moveTo(600, 400);
+    cs.arc(400, 400, 200, 0, Math.PI, true);
+    bs(cs)
+    over(1, cs)
+    cs.fillStyle = "#f5fffa"
+    cs.beginPath()
+    cs.arc(400, 400, 200, 0, Math.PI, false);
+    bs(cs)
+    over(1, cs)
+    cs.lineWidth = 0.5
+    cs.beginPath()
+    moveTo(500, 400)
+    cs.arc(500, 440, 20, 0, 2 * Math.PI, false);
+    over(2, cs)
+    cs.beginPath()
+    cs.fillStyle = "#000"
+    moveTo(300, 400)
+    cs.arc(300, 360, 20, 0, 2 * Math.PI, false);
+    over(2, cs)
+  }
+
+  function bs(cs) {
+    cs.bezierCurveTo(210, 240, 410, 240, 400, 400)
+    cs.bezierCurveTo(390, 580, 590, 580, 600, 400)
+  }
+
+  function over(a, cs) {
+    if (a === 1) {
+      cs.closePath()
+      cs.fill()
+      cs.stroke();
+    } else {
+      cs.closePath()
+      cs.fill()
+    }
+  }
+
+</script>
+</html>

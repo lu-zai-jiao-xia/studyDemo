@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,36 +15,42 @@
     <script>
         var myCanvas = document.querySelector("canvas");
         var ctx = myCanvas.getContext("2d");
-        // 右边黑半圆
-        ctx.fillStyle = "#000";
-        ctx.beginPath();
-        ctx.arc(400, 400, 200, (Math.PI / 180) * 270, (Math.PI / 180) * 90, false);
-        ctx.fill();
-        // 右边白半圆
-        ctx.strokeStyle = "#000";
-        ctx.beginPath();
-        ctx.arc(400, 400, 199, (Math.PI / 180) * 270, (Math.PI / 180) * 90, true);
-        ctx.stroke();
-        // 上面黑圆
-        ctx.fillStyle = "#000";
-        ctx.beginPath();
-        ctx.arc(400, 300, 100, 0, 2 * Math.PI, false);
-        ctx.fill();
-        // 下面白圆
-        ctx.fillStyle = "#fff";
-        ctx.beginPath();
-        ctx.arc(400, 499, 99, 0, 2 * Math.PI, false);
-        ctx.fill();
-        // 上面白太极眼
-        ctx.fillStyle = "#fff";
-        ctx.beginPath();
-        ctx.arc(400, 300, 30, 0, 2 * Math.PI, false);
-        ctx.fill();
-        // 下面白太极眼
-        ctx.fillStyle = "#000";
-        ctx.beginPath();
-        ctx.arc(400, 499, 30, 0, 2 * Math.PI, false);
-        ctx.fill();
+        ctx.translate(400, 400);
+        let xuanzhuan = setInterval(function(){
+            ctx.clearRect(800, 800, -100, -100);
+            ctx.rotate((Math.PI / 180) * 1);
+            // 右边黑半圆
+            ctx.fillStyle = "#000";
+            ctx.beginPath();
+            ctx.rotate(2 * Math.PI);
+            ctx.arc(0, 0, 200, 0, 2 * Math.PI,false); 
+            ctx.fill();
+            // 右边白半圆
+            ctx.fillStyle = "#fff";
+            ctx.beginPath();
+            ctx.arc(0, 0, 199, (Math.PI / 180) * 270, (Math.PI / 180) * 90, true);
+            ctx.fill();
+            // 上面黑圆
+            ctx.fillStyle = "#000";
+            ctx.beginPath();
+            ctx.arc(0, -100, 100, 0, 2 * Math.PI, false);
+            ctx.fill();
+            // 下面白圆
+            ctx.fillStyle = "#fff";
+            ctx.beginPath();
+            ctx.arc(0, 99, 99, 0, 2 * Math.PI, false);
+            ctx.fill();
+            // 上面白太极眼
+            ctx.fillStyle = "#fff";
+            ctx.beginPath();
+            ctx.arc(0, -100, 30, 0, 2 * Math.PI, false);
+            ctx.fill();
+            // 下面白太极眼
+            ctx.fillStyle = "#000";
+            ctx.beginPath();
+            ctx.arc(0, 99, 30, 0, 2 * Math.PI, false);
+            ctx.fill();
+        }, 10);
         // 八卦线
         ctx.strokeStyle = "#000";
         ctx.lineWidth = 10;
@@ -203,4 +208,4 @@
         ctx.stroke();
     </script>
 </body>
-</html>
+</html> 

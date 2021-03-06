@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太极八卦</title>
+    <style>
+        canvas {
+            border: 1px solid hotpink;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800px" height="800px"></canvas>
+    <script>
+        var myCanvas = document.querySelector("canvas");
+        var ctx = myCanvas.getContext("2d");
+        ctx.translate(400, 400);
+        let xuanzhuan = setInterval(function(){
+            ctx.clearRect(0, 0, -100, -100);
+            ctx.rotate(Math.PI / 180);
+            // 右边黑半圆
+            ctx.fillStyle = "#000";
+            ctx.beginPath();
+            ctx.rotate(2 * Math.PI);
+            ctx.arc(0, 0, 200, 0, 2 * Math.PI,false); 
+            ctx.fill();
+            // 右边白半圆
+            ctx.fillStyle = "#fff";
+            ctx.beginPath();
+            ctx.arc(0, 0, 199, (Math.PI / 180) * 270, (Math.PI / 180) * 90, true);
+            ctx.fill();
+            // 上面黑圆
+            ctx.fillStyle = "#000";
+            ctx.beginPath();
+            ctx.arc(0, -100, 100, 0, 2 * Math.PI, false);
+            ctx.fill();
+            // 下面白圆
+            ctx.fillStyle = "#fff";
+            ctx.beginPath();
+            ctx.arc(0, 99, 99, 0, 2 * Math.PI, false);
+            ctx.fill();
+            // 上面白太极眼
+            ctx.fillStyle = "#fff";
+            ctx.beginPath();
+            ctx.arc(0, -100, 30, 0, 2 * Math.PI, false);
+            ctx.fill();
+            // 下面白太极眼
+            ctx.fillStyle = "#000";
+            ctx.beginPath();
+            ctx.arc(0, 99, 30, 0, 2 * Math.PI, false);
+            ctx.fill();
+        }, 10);
+        // 八卦线
+        // 乾
+        let path1 = new Path2D();
+        path1.rect(-50, -350, 100,10);
+        let path2 = new Path2D(path1);
+        path2.rect(-50, -330, 100,10);
+        let path3 = new Path2D(path2);
+        path3.rect(-50, -310, 100,10);
+        ctx.fill(path3);
+        // 坎
+        let path4 = new Path2D(path3);
+        path4.rect(350, -50, 10,40);
+        let path5 = new Path2D(path4);
+        path5.rect(350, 10, 10, 40);
+        let path6 = new Path2D(path5);
+        path6.rect(330, -50, 10,100);
+        let path7 = new Path2D(path6);
+        path7.rect(310, -50, 10, 40);
+        let path8 = new Path2D(path7);
+        path8.rect(310, 10, 10,40);
+        ctx.fill(path8);
+        // 离
+        let path9 = new Path2D(path8);
+        path9.rect(-50, 350, 40,10);
+        let path10 = new Path2D(path9);
+        path10.rect(10, 350, 40,10);
+        let path11 = new Path2D(path10);
+        path11.rect(-50, 330, 40, 10);
+        let path12 = new Path2D(path11);
+        path12.rect(10, 330, 40, 10);
+        let path13 = new Path2D(path12);
+        path13.rect(-50, 310, 40, 10);
+        let path14 = new Path2D(path13);
+        path14.rect(10, 310, 40, 10);
+        ctx.fill(path14);
+        // 坤
+        let path15 = new Path2D(path14);
+        path15.rect(-350, -50, 10,100);
+        let path16 = new Path2D(path15);
+        path16.rect(-330, -50, 10, 40);
+        let path17 = new Path2D(path16);
+        path17.rect(-330, 10, 10, 40);
+        let path18 = new Path2D(path17);
+        path18.rect(-310, -50, 10, 100);
+        ctx.fill(path18);
+        // 兑
+        ctx.rotate(Math.PI / 4);
+        ctx.fillRect(-350, -50, 10, 40);
+        ctx.fillRect(-350, 10, 10, 40);
+        ctx.fillRect(-330, -50, 10, 100);
+        ctx.fillRect(-310, -50, 10, 100);
+        // 艮
+        ctx.fillRect(350, -50, 10, 100);
+        ctx.fillRect(330, 10, 10, 40);
+        ctx.fillRect(330, -50, 10, 40);
+        ctx.fillRect(310, 10, 10, 40);
+        ctx.fillRect(310, -50, 10, 40);
+        // 震
+        ctx.fillRect(-50, 350, 40, 10);
+        ctx.fillRect(10, 350, 40, 10);
+        ctx.fillRect(-50, 330, 40, 10);
+        ctx.fillRect(10, 330, 40, 10);
+        ctx.fillRect(-50, 310, 40, 10);
+        ctx.fillRect(10, 310, 40, 10);
+        // 巽
+        ctx.fillRect(-50, -350, 100, 10);
+        ctx.fillRect(-50, -330, 100, 10);
+        ctx.fillRect(-50, -310, 40, 10);
+        ctx.fillRect(10, -310, 40, 10);
+    </script>
+</body>
+</html>
